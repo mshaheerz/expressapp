@@ -1,0 +1,51 @@
+<section>
+    <div class="container-fluid">
+        <h3 class="text-center">Add product</h3>
+        <form action="/admin/add-product" method="POST">
+  <!-- 2 column grid layout with text inputs for the first and last names -->
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" name="name" class="form-control" required/>
+        <label class="form-label" for="form6Example1">Name</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" name="category" class="form-control" required/>
+        <label class="form-label" for="form6Example2">Category</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <input type="text" name="price" class="form-control" required />
+    <label class="form-label" for="form6Example3">Price</label>
+  </div>
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <input type="text" name="description" id="form6Example4" class="form-control" required />
+    <label class="form-label" for="form6Example4">Description</label>
+  </div>
+
+  <!-- Email input -->
+
+    <div class="form-outline mb-4">
+    <input type="text" name="image" class="form-control"  required/>
+    <label class="form-label" for="form6Example5">Image link</label>
+  </div>
+
+  {{!-- <div class="form-outline mb-4">
+    <input type="file" name="Image" class="form-control" />
+    <label class="form-label" for="form6Example5">Image</label>
+  </div> --}}
+
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Submit</button>
+   <a href="/admin/products"  class="btn btn-danger btn-block mb-4">cancel</a>
+</form>
+    </div>
+</section>

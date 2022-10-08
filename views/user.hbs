@@ -1,0 +1,60 @@
+<div class="container-fluid bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Shopping</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="/">Products</a>
+          <a class="nav-link" href="#">Cart</a>
+          <a class="nav-link" href="#">Orders</a>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Right</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link  float-right" href="/logout">Logout</a>
+
+            </li>
+
+          </ul>
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item"></li>
+            <a class="nav-link" href="#"> {{#if user}}<p>welcome {{user.email}}</p>{{/if}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container-fluid ">
+  <div class="container pt-5 ">
+    <div class="row ">
+      {{#each products}}
+
+      <div class="col align-items-center rounded-4 d-flex justify-content-center">
+        <div class="card p-2 bg-light" style="width: 18rem;">
+          <img class="card-img-top" height="300px" src="{{this.image}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <p class="card-text">Price: {{this.price}}</p>
+            <a href="#" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+
+
+
+    </div>
+  </div>
+</div>
